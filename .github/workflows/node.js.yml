@@ -20,18 +20,19 @@ jobs:
     steps:
     
     - uses: actions/checkout@v2
-    - run: cd client
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install -g pkg
-
-    - run: npm install 
-    - run: npm ci
-    - run: pkg .
+    - run: npm intall
+      working-directory: client
+    - run: npm run build --if-present
+      working-directory: client
     - run: npm test
+      working-directory: client
+    - run: npm install -g pkg
+    - run: pkg .
+      working-directory: client
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
