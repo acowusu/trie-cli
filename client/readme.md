@@ -12,7 +12,7 @@ Usage: command `<paramater>`
 
 #### Commands:
 
-|                         |                                          |
+| Command                 |                                          |
 | ----------------------- | ---------------------------------------- |
 | trie-cli-linux show     | Display the Trie                         |
 | trie-cli-linux add      | Add an item to the Trie                  |
