@@ -10,8 +10,6 @@ To do this head over to the releases section and download an executable for your
 
 Usage: command `<paramater>`
 
-#### Commands:
-
 | Command                 |                                          |
 | ----------------------- | ---------------------------------------- |
 | trie-cli-linux show     | Display the Trie                         |
@@ -31,24 +29,24 @@ Options:
 
 Examples:
 
-```
-trie-cli-linux add ham
-```
-
 add 'ham' to the Trie
 
 ```
-trie-cli-linux includes dog
+trie-cli-linux add ham
 ```
 
 Output either true or false depending on whether
 the keyword 'dog' exist in Trie
 
 ```
-trie-cli-linux delete log
+trie-cli-linux includes dog
 ```
 
 remove keyword 'log' from the Trie
+
+```
+trie-cli-linux delete log
+```
 
 ### Developing
 
