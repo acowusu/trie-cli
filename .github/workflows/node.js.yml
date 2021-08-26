@@ -18,14 +18,16 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    
     - uses: actions/checkout@v2
+    - run: cd client
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install -g pkg
-    - run: cd client
+
     - run: npm install 
     - run: npm ci
     - run: pkg .
