@@ -36,6 +36,6 @@ jobs:
         prerelease: true
         title: "Development Build"
         files: |
-          client/trie-cli-linux  
-          client/trie-cli-macos  
+          client/trie-cli-linux
+          client/trie-cli-macos
           client/trie-cli-win.exe
