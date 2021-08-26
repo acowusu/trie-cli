@@ -1,4 +1,4 @@
-const url = "https://9a2qea.deta.dev/";
+const url = "https://trie.deta.dev/";
 const axios = require("axios");
 
 module.exports = {
