@@ -17,12 +17,13 @@ app.get("/reset", (req, res) =>
 app.get("/add/:keyword", (req, res) =>
     res.json(tree.add(req.params.keyword) || tree.display()),
 );
+app.post("/add/:keyword", (req, res) =>
+    res.json(tree.add(req.params.keyword) || tree.display()),
+);
 app.get("/delete/:keyword", (req, res) =>
     res.json(tree.delete(req.params.keyword) || tree.display()),
 );
-app.post("/delete/:keyword", (req, res) =>
-    res.json(tree.delete(req.params.keyword) || tree.display()),
-);
+
 app.delete("/delete/:keyword", (req, res) =>
     res.json(tree.delete(req.params.keyword) || tree.display()),
 );
