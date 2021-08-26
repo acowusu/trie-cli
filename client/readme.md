@@ -2,7 +2,57 @@
 
 ### Installation
 
-To install the CLI, you need to have Node js version 12 or greater installed.
+The Easiest way to use Trie CLI is to use one of the prebuilt binaries.
+
+To do this head over to the releases section and download an executable for your platform.
+
+### Usage
+
+Usage: command `<paramater>`
+
+#### Commands:
+
+|                         |                                          |
+| ----------------------- | ---------------------------------------- |
+| trie-cli-linux show     | Display the Trie                         |
+| trie-cli-linux add      | Add an item to the Trie                  |
+| trie-cli-linux includes | check whether Trie includes item         |
+| trie-cli-linux delete   | remove an item                           |
+| trie-cli-linux complete | autocomplete with a given starting value |
+
+If you are using windows then you should run
+`trie-cli-win.exe ` and on Mac `trie-cli-macos` instead of `trie-cli-linux`
+
+Options:
+
+--help Show help [boolean]
+
+--version Show version number [boolean]
+
+Examples:
+
+```
+trie-cli-linux add ham
+```
+
+add 'ham' to the Trie
+
+```
+trie-cli-linux includes dog
+```
+
+Output either true or false depending on whether
+the keyword 'dog' exist in Trie
+
+```
+trie-cli-linux delete log
+```
+
+remove keyword 'log' from the Trie
+
+### Developing
+
+To contribute and develop the CLI further, you need to have Node js version 12 or greater installed.
 
 Next clone the repository
 
@@ -22,7 +72,9 @@ After that modify the permissions of the program using `chod` to make it executa
 chmod +x index.js
 ```
 
-### usage
+After that you can modify any files and see the results without having to build for each platorm using the following usage
+
+### Development usage
 
 ```
 Usage: command <paramater>
@@ -44,6 +96,22 @@ Examples:
   ./index.js includes dog   Output either true or false depending on whether the
                           keyword 'dog' exist in Trie
   ./index.js delete log     remove keyword  'log' from the Trie
+```
+
+### Build
+
+To build the cli you must have `pkg` installed.
+
+If tyou don't have it installed already, you can do so with npm:
+
+```
+npm install -g pkg
+```
+
+Next enter the client directory and run pkg
+
+```
+pkg .
 ```
 
 ### Test
