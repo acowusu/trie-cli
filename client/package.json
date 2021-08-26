@@ -1,0 +1,17 @@
+{
+    "name": "trie-cli",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "bin": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "keywords": [],
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "jest": "^27.0.6",
+        "yargs": "^17.1.1"
+    }
+}
