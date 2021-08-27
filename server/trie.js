@@ -24,7 +24,7 @@ class Node {
         };
     }
     autocomplete(value) {
-        let tail;
+        let tail = "";
         if (value.length > this.value.length) {
             if (!value.startsWith(this.value)) {
                 return [];
@@ -34,7 +34,6 @@ class Node {
             if (!this.value.startsWith(value)) {
                 return [];
             }
-            tail = "";
         }
 
         const options = this.children.flatMap((child) =>
