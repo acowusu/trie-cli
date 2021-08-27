@@ -1,4 +1,4 @@
-## trie-server
+## Trie-server
 
 ### Install
 
@@ -35,31 +35,31 @@ Requests can be made to the following endpoint https://trie.deta.dev/
 Display the Trie
 
 ```
-curl https://9a2qea.deta.dev/
+curl https://trie.deta.dev/
 ```
 
 Reset the Trie to an empty one
 
 ```
-curl https://9a2qea.deta.dev/reset
+curl https://trie.deta.dev/reset
 ```
 
 Add `ham` to the Trie
 
 ```
-curl https://9a2qea.deta.dev/add/ham
+curl https://trie.deta.dev/add/ham
 ```
 
 Delete `log` from the Trie
 
 ```
-curl https://9a2qea.deta.dev/delete/log
+curl https://trie.deta.dev/delete/log
 ```
 
 Output either true or false depending on whether the keyword `dog` exist in Trie
 
 ```
-curl https://9a2qea.deta.dev/contains/doc
+curl https://trie.deta.dev/contains/doc
 ```
 
 ### Test
@@ -69,3 +69,7 @@ To run the test suite execute the following command:
 ```bash
 npm run test
 ```
+
+### Hosting
+
+The server is hosted on Deta.sh which makes use of AWS. No Deta specific functionality is used, so this project could be hosted in almost any node environment.
